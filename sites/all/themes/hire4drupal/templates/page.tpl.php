@@ -1,37 +1,7 @@
 <div id="wrap">
-    <div class="container">
-        
-        <?php if ($page['header_top_left'] || $page['header_top_right']): ?>
-        <!-- #header-top -->
-        <div id="header-top" class="sixteen columns clearfix">
-            
-            <?php if ($page['header_top_left'] && $page['header_top_right']) { ?>
-            <div class="one_half">
-            <?php print render($page['header_top_left']); ?>
-            </div>
-            
-            <div class="one_half last">
-            <?php print render($page['header_top_right']); ?>
-            </div>
-            <?php } else { ?>
-                
-            <?php print render($page['header_top_left']); ?>
-            <?php print render($page['header_top_right']); ?>
-            
-            <?php } ?>
-            
-        </div><!-- /#header-top -->
-        <?php endif; ?>
-        
-        <div class="clear"></div>
-        
+    <div class="container">      
         <!-- #header -->
-        <?php if ($page['header_right']) { ?>
-        <div id="header" class="five columns clearfix">
-		<?php } else { ?>
-        <div id="header" class="sixteen columns clearfix">   
-        <?php } ?>
-        
+        <div id="header" class="sixteen columns clearfix">          
             <div class="inner">
     
                 <?php if ($logo): ?>
@@ -42,7 +12,6 @@
                 
                 <?php if ($site_name || $site_slogan): ?>
                 <div id="name-and-slogan"<?php if ($hide_site_name && $hide_site_slogan) { print ' class="element-invisible"'; } ?>>
-                
                     <?php if ($site_name): ?>
                     <div id="site-name"<?php if ($hide_site_name) { print ' class="element-invisible"'; } ?>>
                     <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><?php print $site_name; ?></a>
@@ -60,16 +29,6 @@
             </div>
         </div><!-- /#header -->
         
-        <?php if ($page['header_right']) : ?>
-        <!-- #header-right -->
-        <div id="header-right" class="eleven columns clearfix">
-        
-        	 <div class="inner">
-			<?php print render($page['header_right']); ?>
-        	</div>
-            
-        </div><!-- /#header-right -->
-        <?php endif; ?>
         
         <div class="clear"></div>
         
@@ -108,7 +67,6 @@
 		<?php } else { ?>
         <div id="content" class="sixteen columns clearfix">    
         <?php } ?>
-        
             <?php if ($messages): ?>
                 <div id="messages">
                 <?php print $messages; ?>
@@ -214,7 +172,7 @@
                 <?php if (!empty($site_name)):?>
                 <?php print $site_name;?>- This is a Free Drupal Theme<br/>
                 <?php endif;?>
-                Ported to Drupal for the Open Source Community by <a href="http://www.drupalizing.com" target="_blank">Drupalizing</a>, a Project of <a href="http://www.morethanthemes.com" target="_blank">More than (just) Themes</a>. Original design by <a href="http://www.simplethemes.com/" target="_blank">Simple Themes</a>.
+
                 </div>
         	</div>
         </div>
